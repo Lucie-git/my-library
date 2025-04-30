@@ -8,6 +8,18 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
+body {
+  background-color: white;
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(35, 35, 35);
+    color: rgba(255, 255, 255, 0.927);
+  }
+}
+
 .container {
   max-width: 20rem;
   margin-right: auto;
