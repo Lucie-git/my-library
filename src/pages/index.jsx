@@ -16,6 +16,7 @@ const books = myData.map((book) => {
       author={book.author}
       title={book.title}
       description={book.description}
+      isDetailPage={false}
     />
   );
 });
