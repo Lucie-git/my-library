@@ -25,3 +25,15 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: rgb(0, 255, 174);
+}
+
+a:visited {
+  color: rgb(0, 105, 128);
+}
