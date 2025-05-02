@@ -3,6 +3,7 @@ import '../global.css';
 import './index.css';
 import { Book } from '../components/book/book';
 import { AddBookForm } from '../components/addBookForm/addBookForm';
+import { Navigation } from '../components/navigation/navigation';
 
 const response = await fetch('http://localhost:4000/api/books');
 const data = await response.json();
@@ -26,6 +27,7 @@ document.querySelector('#root').innerHTML = render(
     <header>
       <div className="logo"></div>
       <h1>Knihovna</h1>
+      <Navigation />
       <button className="addBook">Přidat knihu</button>
     </header>
     <main>
