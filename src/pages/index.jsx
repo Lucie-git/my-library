@@ -77,12 +77,22 @@ addBookFormElm.addEventListener('submit', async (e) => {
   window.location.reload();
 });
 
+//Úprava dat
+
+const editBtns = document.querySelectorAll('.edit-book');
+editBtns.forEach((btn) => {
+  btn.addEventListener('click', async (e) => {
+    console.log('Něco dělám');
+    // await fetch(`http://localhost:4000/api/books/${e.target.dataset.id}`, { method: 'PUT' });
+    window.location.reload();
+  });
+});
+
 //Mazání dat
 
 const deleteBtns = document.querySelectorAll('.delete-book');
 deleteBtns.forEach((btn) => {
   btn.addEventListener('click', async (e) => {
-    console.log('Něco dělám');
     await fetch(`http://localhost:4000/api/books/${e.target.dataset.id}`, { method: 'DELETE' });
     window.location.reload();
   });

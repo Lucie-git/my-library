@@ -15,7 +15,9 @@ export const Book = ({ id, author, title, description, isDetailPage }) => {
         </a>
       )}
       <p>{description}</p>
-      <button>Upravit</button>
+      <button className="edit-book" data-id={`${id}`}>
+        Upravit
+      </button>
       <button className="delete-book" data-id={`${id}`}>
         Smazat
       </button>
