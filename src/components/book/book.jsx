@@ -8,7 +8,11 @@ export const Book = ({ id, author, title, description, isDetailPage }) => {
     <div className="shelf">
       <h2>{author}</h2>
       {isDetailPage ? (
-        <h3>{title}</h3>
+        <>
+          <h3>{title}</h3>
+          <button>Upravit</button>
+          <button>Smazat</button>
+        </>
       ) : (
         <a href={`bookPage.html?id=${id}`}>
           <h3>{title}</h3>
