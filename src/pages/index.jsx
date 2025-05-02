@@ -42,6 +42,8 @@ document.querySelector('#root').innerHTML = render(
   </div>,
 );
 
+//Formulář pro přidání knihy
+
 const addBookButton = document.querySelector('.addBook');
 const addBookFormDiv = document.querySelector('.add.book.form');
 const bookListDiv = document.querySelector('.books.list');
@@ -50,6 +52,8 @@ addBookButton.addEventListener('click', () => {
   bookListDiv.style.display = 'none';
   addBookFormDiv.style.display = 'block';
 });
+
+//Obsluha formuláře, posílání dat do API
 
 const addBookFormElm = document.querySelector('#registration');
 addBookFormElm.addEventListener('submit', async (e) => {
@@ -71,4 +75,15 @@ addBookFormElm.addEventListener('submit', async (e) => {
     }),
   });
   window.location.reload();
+});
+
+//Mazání dat
+
+const deleteBtns = document.querySelectorAll('.delete-book');
+deleteBtns.forEach((btn) => {
+  btn.addEventListener('click', async (e) => {
+    console.log('Něco dělám');
+    await fetch(`http://localhost:4000/api/books/${e.target.dataset.id}`, { method: 'DELETE' });
+    window.location.reload();
+  });
 });
